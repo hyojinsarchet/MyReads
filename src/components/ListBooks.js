@@ -1,8 +1,10 @@
-import React from "react";
+import React, { Component } from "react";
 
-class ListBooks extends React.Componenet {
+class ListBooks extends Component {
   render() {
     const books = this.props.books;
+
+    console.log("props", this.props);
 
     return (
       <div className="list-books">

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
+import * as BooksAPI from "./BooksAPI";
 
-class Search extends React.Componenet {
+class Search extends Component {
   render() {
     return (
       <div className="search-books">
