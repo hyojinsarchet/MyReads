@@ -1,10 +1,15 @@
 import React, { Component } from "react";
-import * as BooksAPI from "./BooksAPI";
+import { Link } from "react-router-dom";
+
+// import * as BooksAPI from "./BooksAPI";
 
 class Search extends Component {
   render() {
     return (
       <div className="search-books">
+        <div>
+          <Link to="/">Close</Link>
+        </div>
         <div className="search-books-bar">
           <a
             className="close-search"

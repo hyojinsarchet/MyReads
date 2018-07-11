@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class ListBooks extends Component {
   static propTypes = {
@@ -11,10 +11,13 @@ class ListBooks extends Component {
   render() {
     const books = this.props.books;
 
-    console.log("props", this.props);
+    // console.log("props", this.props);
 
     return (
       <div className="list-books">
+        <div>
+          <Link to="/search">Update Book</Link>
+        </div>
         <div className="list-books-title">
           <h1>MyReads</h1>
         </div>
