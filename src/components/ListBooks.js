@@ -15,9 +15,6 @@ class ListBooks extends Component {
 
     return (
       <div className="list-books">
-        <div>
-          <Link to="/search">Update Book</Link>
-        </div>
         <div className="list-books-title">
           <h1>MyReads</h1>
         </div>
@@ -263,9 +260,10 @@ class ListBooks extends Component {
           </div>
         </div>
         <div className="open-search">
-          <a onClick={() => this.setState({ showSearchPage: true })}>
+          <Link to="./search">Add a book</Link>
+          {/* <a onClick={() => this.setState({ showSearchPage: true })}>
             Add a book
-          </a>
+          </a> */}
         </div>
       </div>
     );
