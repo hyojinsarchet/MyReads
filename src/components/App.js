@@ -23,15 +23,15 @@ class BooksApp extends Component {
     });
   }
 
-  // updateBookShelf = (book, shelf) => {
-  //   BooksAPI.update(book, shelf).then(() => {
-  //     console.log(book, shelf);
-  //
-  //     this.setState(() => ({
-  //       books: books
-  //     }));
-  //   });
-  // };
+  updateBookShelf = (book, shelf) => {
+    BooksAPI.update(book, shelf).then(() => {
+      BooksAPI.getAll().then(books => {
+        this.setState(() => ({
+          books: books
+        }));
+      });
+    });
+  };
 
   render() {
     return (
@@ -49,7 +49,9 @@ class BooksApp extends Component {
         <Route
           exact
           path="/search"
-          render={() => <Search books={this.state.books} />}
+          render={() => (
+            <Search books={this.state.books} onChange={this.updateBookShelf} />
+          )}
         />
       </div>
     );
